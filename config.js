@@ -3,9 +3,9 @@ window.CONFIG = {
   // Store Details
   storeName: "Lilacmart", // Full Store Name
   shortStoreName: "Lilacmart",
-  whatsappNumber: "6287751126614", // Format: 62xxxxxxxxxx (no + or spaces)
-  telegramUsername: "Mavhdu",
-  telegramLink: "https://t.me/rainstoreproof",
+  whatsappNumber: "6289513348955", // Format: 62xxxxxxxxxx (no + or spaces)
+  telegramUsername: "Lilacjiyoo",
+  telegramLink: "https://t.me/Lilacjiyoo",
   websiteUrl: "",
   emailAdmin: "",
   workHours: "08:00 – 23:00 WITA",

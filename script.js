@@ -558,21 +558,21 @@ function renderTncAccordions(tncList) {
         Tim CS Lilacmart siap membantu pertanyaan, konsultasi varian produk, atau klaim garansi transaksi kamu!
       </div>
       <div class="tnc-social-grid">
-        <a class="tnc-social-btn telegram" href="#" id="tncTeleBtn" target="_blank">
+        <a class="tnc-social-btn telegram" href="https://t.me/Lilacjiyoo" id="tncTeleBtn" target="_blank">
           <i class="fab fa-telegram text-primary fs-5"></i>
-          <span>Testimonial Channel</span>
+          <span>@Lilacjiyoo</span>
         </a>
-        <a class="tnc-social-btn twitter" href="https://x.com/rainztore?s=21" id="tncXBtn" target="_blank">
-          <i class="fab fa-x-twitter text-dark fs-5"></i>
-          <span>X (Twitter)</span>
+        <a class="tnc-social-btn twitter" href="https://x.com/dewsolyw" id="tncXBtn" target="_blank">
+          <span class="x-social-icon">X</span>
+          <span>@dewsolyw</span>
         </a>
-        <a class="tnc-social-btn instagram" href="https://instagram.com" id="tncIgBtn" target="_blank">
+        <a class="tnc-social-btn instagram" href="https://instagram.com/imsolyw____" id="tncIgBtn" target="_blank">
           <i class="fab fa-instagram text-danger fs-5"></i>
-          <span>Instagram Official</span>
+          <span>@imsolyw____</span>
         </a>
-        <a class="tnc-social-btn whatsapp" href="https://wa.me/${DEFAULT_WA}" id="tncWaBtn" target="_blank">
+        <a class="tnc-social-btn whatsapp" href="https://wa.me/6289513348955" id="tncWaBtn" target="_blank">
           <i class="fab fa-whatsapp text-success fs-5"></i>
-          <span>WhatsApp CS Admin</span>
+          <span>089513348955</span>
         </a>
       </div>
     </div>`;

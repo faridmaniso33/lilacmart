@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <script src="config.js?_v=20260904_08"></script>
+  <title>Lilacmart — Digital Product Marketplace</title>
+
+  <!-- Bootstrap 5 & FontAwesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css?_v=20260904_08" />
+</head>
+
+<body>
+
+  <div class="notif" id="notif"></div>
+
+  <!-- ─── MARKETPLACE TOP NAVBAR ─── -->
+  <nav id="mainNavbar">
+    <!-- Brand Info Left -->
+    <div class="header-brand">
+      <img class="header-logo-img" id="store-logo" src="logo-peony.jpg" alt="Lilacmart Logo"
+        onerror="this.style.display='none'; document.getElementById('logo-placeholder').style.display='flex';">
+      <div class="header-logo-placeholder" id="logo-placeholder" style="display:none">🛍️</div>
+      <div class="header-title-wrap">
+        <span class="header-title">Lilac<em>mart</em></span>
+        <span class="badge-verified">✦ Official Marketplace</span>
+      </div>
+    </div>
+
+    <!-- Mega Search Bar Center -->
+    <div class="nav-search-container">
+      <div class="search-wrap">
+        <span class="search-ico"><i class="fa-solid fa-magnifying-glass"></i></span>
+        <input type="text" id="searchInput" placeholder="Cari aplikasi premium, streaming, AI, game..." />
+      </div>
+    </div>
+
+    <!-- Actions & Page Navigation Right -->
+    <div class="nav-actions">
+      <div class="page-nav">
+        <button class="nav-btn active" onclick="showPage('shop')">
+          <i class="fa-solid fa-grip"></i> Katalog
+        </button>
+        <button class="nav-btn" onclick="showPage('testi')">
+          <i class="fa-solid fa-star"></i> Ulasan
+        </button>
+        <button class="nav-btn" onclick="showPage('tnc')">
+          <i class="fa-solid fa-circle-info"></i> Bantuan
+        </button>
+      </div>
+
+      <button class="cart-trigger-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span class="d-none d-md-inline">Keranjang</span>
+        <span class="nav-badge" id="navCartCount">0</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ─── MARKETPLACE HERO BANNER ─── -->
+  <header>
+    <div class="hero-marketplace-wrap">
+      <!-- Left Column: Hero Copy & Stats -->
+      <div class="hero-left-col">
+        <span class="header-eyebrow">✦ OFFICIAL DIGITAL SOLUTIONS &amp; PREMIUM SUBSCRIPTIONS</span>
+        <h1 class="hero-main-title">Solusi Aplikasi Premium &amp; Lisensi Digital Terpercaya</h1>
+        <p class="header-subtitle" id="store-subtitle">
+          Akses praktis ke berbagai platform streaming, tools kreativitas, kecerdasan buatan (AI), dan software legal.
+          Dilengkapi jaminan garansi penuh, transaksi aman, dan pengaktifan serba cepat.
+        </p>
+
+        <div class="header-stats">
+          <div class="hstat">
+            <i class="fa-solid fa-box-open text-vanilla me-1"></i>
+            <span class="hstat-num" id="stat-ready">12+</span>
+            <span class="hstat-label">Produk Aktif</span>
+          </div>
+          <div class="hstat">
+            <i class="fa-solid fa-shield-check text-vanilla me-1"></i>
+            <span class="hstat-num">100%</span>
+            <span class="hstat-label">Garansi Layanan</span>
+          </div>
+          <div class="hstat">
+            <i class="fa-solid fa-bolt text-vanilla me-1"></i>
+            <span class="hstat-num">Fast</span>
+            <span class="hstat-label">Response CS</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Marketplace Highlight Cards -->
+      <div class="hero-right-col">
+        <div class="promo-card-highlight">
+          <div class="promo-card-badge">✦ PENAWARAN EKSKLUSIF</div>
+          <div class="promo-card-title">Hemat hingga 50% untuk Pembelian Produk Digital</div>
+          <p class="promo-card-sub">Metode pembayaran lengkap via QRIS &amp; E-Wallet dengan pemrosesan secara instan.
+          </p>
+          <div class="promo-card-tags">
+            <span class="ptag">● Garansi Resmi</span>
+            <span class="ptag">● Process Instan</span>
+            <span class="ptag">● Bantuan 24/7</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ─── MARKETPLACE TICKER MARQUEE ─── -->
+  <div class="header-ticker">
+    <div class="ticker-track">
+      <span class="ticker-item">Netflix 4K Ultra HD</span>
+      <span class="ticker-item">Disney+ Hotstar</span>
+      <span class="ticker-item">Spotify Premium</span>
+      <span class="ticker-item">Canva Pro Lifetime</span>
+      <span class="ticker-item">YouTube Premium</span>
+      <span class="ticker-item">CapCut Pro</span>
+      <span class="ticker-item">Vidio Platinum</span>
+      <span class="ticker-item">VIU Premium</span>
+      <span class="ticker-item">iQIYI VIP</span>
+      <span class="ticker-item">Goodnotes 6</span>
+      <!-- Duplicate Loop -->
+      <span class="ticker-item">Netflix 4K Ultra HD</span>
+      <span class="ticker-item">Disney+ Hotstar</span>
+      <span class="ticker-item">Spotify Premium</span>
+      <span class="ticker-item">Canva Pro Lifetime</span>
+      <span class="ticker-item">YouTube Premium</span>
+      <span class="ticker-item">CapCut Pro</span>
+      <span class="ticker-item">Vidio Platinum</span>
+      <span class="ticker-item">VIU Premium</span>
+      <span class="ticker-item">iQIYI VIP</span>
+      <span class="ticker-item">Goodnotes 6</span>
+    </div>
+  </div>
+
+  <!-- ─── MAIN MARKETPLACE CONTENT ─── -->
+  <main>
+
+    <!-- SHOP CATALOG PAGE -->
+    <div class="page active" id="page-shop">
+
+      <!-- Category Navigation Explorer -->
+      <div class="marketplace-cat-section">
+        <div class="cat-section-header">
+          <h3 class="cat-section-title"><i class="fa-solid fa-layer-group me-2 text-raspberry"></i>Kategori Produk</h3>
+          <span class="section-count" id="product-count"></span>
+        </div>
+        <div class="cat-pills" id="cat-bar">
+          <!-- Dynamic Category Pills -->
+        </div>
+      </div>
+
+      <!-- Marketplace Product Cards Grid -->
+      <div class="product-grid" id="produk-list">
+        <!-- Dynamic Products Load Here -->
+      </div>
+
+      <!-- Load More Button -->
+      <div class="text-center mt-5">
+        <button id="btnLoadMore" class="btn-card-buy" style="display:none; max-width: 240px; margin: 0 auto;">
+          Muat Lebih Banyak Produk ✦
+        </button>
+      </div>
+    </div>
+
+    <!-- TESTIMONIALS PAGE TAB -->
+    <div class="page" id="page-testi">
+      <div class="section-header">
+        <h2 class="section-title"><i class="fa-solid fa-comments text-raspberry me-2"></i>Ulasan Pelanggan</h2>
+      </div>
+
+      <div class="testi-grid" id="testi-grid">
+        <!-- Testimonials Cards Load Here -->
+      </div>
+
+      <div class="testi-form">
+        <div class="testi-form-title">Tulis Pengalaman Belanja 🛍️</div>
+        <div class="star-select">
+          <span class="star-opt selected" data-v="1" onclick="setStar(1)">⭐</span>
+          <span class="star-opt selected" data-v="2" onclick="setStar(2)">⭐</span>
+          <span class="star-opt selected" data-v="3" onclick="setStar(3)">⭐</span>
+          <span class="star-opt selected" data-v="4" onclick="setStar(4)">⭐</span>
+          <span class="star-opt selected" data-v="5" onclick="setStar(5)">⭐</span>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Nama Kamu</label>
+          <input class="form-input" id="t-name" placeholder="Contoh: Putri A." />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Ulasan / Pengalaman</label>
+          <textarea class="form-textarea" id="t-text" rows="3"
+            placeholder="Tuliskan pengalaman belanja kamu di Lilacmart..."></textarea>
+        </div>
+        <button class="btn-card-buy mt-3" onclick="submitTestimonial()">
+          Kirim Ulasan Pelanggan 💖
+        </button>
+      </div>
+    </div>
+
+    <!-- TERMS & HELP CENTER PAGE TAB -->
+    <div class="page" id="page-tnc">
+      <div class="section-header justify-content-center text-center mb-4">
+        <h2 class="section-title">
+          <i class="fa-solid fa-shield-heart text-raspberry me-2"></i>Pusat Bantuan &amp; Ketentuan Lilacmart
+        </h2>
+      </div>
+
+      <div class="tnc-container">
+        <div id="tncLoadingState" class="text-center py-4">
+          <div class="spinner-border text-raspberry" role="status"></div>
+          <p class="small text-muted mt-2">Memuat Ketentuan Toko...</p>
+        </div>
+
+        <!-- CONTACT CARD -->
+        <div class="tnc-contact-card">
+          <div class="tnc-contact-header">
+            💬 Hubungi Customer Support
+          </div>
+          <div class="tnc-contact-sub">
+            Tim CS Lilacmart siap membantu pertanyaan, konsultasi varian produk, atau klaim garansi transaksi kamu!
+          </div>
+          <div class="tnc-social-grid">
+            <a class="tnc-social-btn telegram" href="#" id="tncTeleBtn" target="_blank">
+              <i class="fab fa-telegram text-primary fs-5"></i>
+              <span>Testimonial Channel</span>
+            </a>
+            <a class="tnc-social-btn twitter" href="https://x.com/rainztore?s=21" id="tncXBtn" target="_blank">
+              <i class="fab fa-x-twitter text-dark fs-5"></i>
+              <span>X (Twitter)</span>
+            </a>
+            <a class="tnc-social-btn instagram" href="https://instagram.com" id="tncIgBtn" target="_blank">
+              <i class="fab fa-instagram text-danger fs-5"></i>
+              <span>Instagram Official</span>
+            </a>
+            <a class="tnc-social-btn whatsapp" href="#" id="tncWaBtn" target="_blank">
+              <i class="fab fa-whatsapp text-success fs-5"></i>
+              <span>WhatsApp CS Admin</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ─── MARKETPLACE TRUST GUARANTEE BAR ─── -->
+  <section class="marketplace-trust-bar">
+    <div class="container">
+      <div class="row g-4 text-center">
+        <div class="col-md-3 col-6">
+          <div class="trust-item">
+            <i class="fa-solid fa-shield-heart text-raspberry fs-3 mb-2"></i>
+            <h6 class="fw-bold mb-1">Garansi Akun 100%</h6>
+            <p class="small text-muted mb-0">Jaminan garansi penuh sesuai s&amp;k berlaku.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="trust-item">
+            <i class="fa-solid fa-bolt text-raspberry fs-3 mb-2"></i>
+            <h6 class="fw-bold mb-1">Pengiriman Instan</h6>
+            <p class="small text-muted mb-0">Proses kilat via WhatsApp / Telegram Admin.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="trust-item">
+            <i class="fa-solid fa-qrcode text-raspberry fs-3 mb-2"></i>
+            <h6 class="fw-bold mb-1">QRIS &amp; Multi Payment</h6>
+            <p class="small text-muted mb-0">Bayar mudah via QRIS, DANA, GoPay, &amp; Bank.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="trust-item">
+            <i class="fa-solid fa-headset text-raspberry fs-3 mb-2"></i>
+            <h6 class="fw-bold mb-1">Layanan CS Responsive</h6>
+            <p class="small text-muted mb-0">Siap melayani pertanyaan &amp; kendala kamu.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── STRUCTURED MARKETPLACE FOOTER ─── -->
+  <footer class="site-footer-full">
+    <div class="container px-4">
+      <div class="row g-4 justify-content-between align-items-start">
+
+        <!-- Brand Info Column -->
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-brand-wrap mb-3">
+            <div class="footer-brand-title footer-brand-name">Lilacmart</div>
+            <span class="badge bg-light text-dark fw-bold border ms-2">✦ Digital Marketplace</span>
+          </div>
+          <p class="footer-brand-desc">
+            Lilacmart adalah platform marketplace terpercaya untuk pembelian aplikasi premium, lisensi streaming, &amp;
+            layanan digital berkualitas tinggi dengan garansi resmi.
+          </p>
+          <div class="footer-badges">
+            <span class="footer-badge">✦ Official Store</span>
+            <span class="footer-badge">⚡ Instant Order</span>
+            <span class="footer-badge">🛡️ Transaksi Safe</span>
+          </div>
+        </div>
+
+        <!-- Quick Navigation Column -->
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-sec-title">Navigasi Marketplace</div>
+          <ul class="footer-nav-list">
+            <li><a href="#" onclick="showPage('shop'); window.scrollTo({top:0, behavior:'smooth'}); return false;"><i
+                  class="fa-solid fa-store me-2 text-raspberry"></i>Katalog Produk</a></li>
+            <li><a href="#" onclick="showPage('testi'); window.scrollTo({top:0, behavior:'smooth'}); return false;"><i
+                  class="fa-solid fa-star me-2 text-warning"></i>Ulasan Pelanggan</a></li>
+            <li><a href="#" onclick="showPage('tnc'); window.scrollTo({top:0, behavior:'smooth'}); return false;"><i
+                  class="fa-solid fa-circle-question me-2 text-primary"></i>Pusat Bantuan &amp; T&amp;C</a></li>
+            <li><a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart"><i
+                  class="fa-solid fa-bag-shopping me-2 text-success"></i>Keranjang Belanja</a></li>
+          </ul>
+        </div>
+
+        <!-- Payment Badges Column -->
+        <div class="col-lg-4 col-md-12">
+          <div class="footer-sec-title">Metode Pembayaran</div>
+          <p class="small text-white-50">Mendukung berbagai pembayaran instan tanpa ribet:</p>
+          <div class="payment-chip-grid">
+            <span class="pchip"><i class="fa-solid fa-qrcode me-1"></i> QRIS</span>
+            <span class="pchip"><i class="fa-solid fa-wallet me-1"></i> DANA</span>
+            <span class="pchip"><i class="fa-solid fa-mobile me-1"></i> ShopeePay</span>
+            <span class="pchip"><i class="fa-solid fa-money-bill-wave me-1"></i> GoPay</span>
+            <span class="pchip"><i class="fa-solid fa-building-columns me-1"></i> Transfer Bank</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Copyright Bar -->
+      <div class="footer-bottom-bar">
+        <p class="mb-0">© <span id="footerYear">2026</span> <strong class="footer-brand-name">Lilacmart
+            Marketplace</strong>. All rights reserved. Made with 💖</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ─── FLOATING CART BUTTON ─── -->
+  <div class="floating-cart" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart">
+    <i class="fa-solid fa-bag-shopping"></i>
+    <span>Keranjang</span>
+    <span class="cart-count-badge" id="cartCount">0</span>
+  </div>
+
+  <!-- ─── MODAL DETAIL PRODUK ─── -->
+  <div class="modal fade" id="produkModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content" id="produkModalContent">
+        <div class="modal-header">
+          <h5 class="modal-title">Detail &amp; Varian Produk</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="modalBody">
+          <!-- Dynamic Variant Content -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-dismiss="modal">Tutup</button>
+          <button type="button" class="btn btn-sm btn-primary" id="modalAddCart">
+            <i class="fa-solid fa-cart-plus me-1"></i> Tambah Keranjang
+          </button>
+          <a href="#" target="_blank" class="btn btn-sm btn-success" id="modalPesanBtn">
+            <i class="fab fa-whatsapp me-1"></i> Pesan Langsung
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── OFFCANVAS KERANJANG ─── -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCart" aria-labelledby="offcanvasCartLabel">
+    <div class="offcanvas-header border-bottom">
+      <h5 class="offcanvas-title fw-bold" id="offcanvasCartLabel">
+        <i class="fa-solid fa-bag-shopping text-raspberry me-2"></i>Keranjang Belanja
+      </h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div id="cartItems">
+        <!-- Dynamic Cart Items -->
+      </div>
+      <div class="checkout-inputs mt-3 pt-3 border-top">
+        <div class="mb-2">
+          <label class="form-label small fw-bold text-dark mb-1">👤 Nama Pemesan</label>
+          <input type="text" class="form-control form-control-sm" id="buyerName" placeholder="Tuliskan nama kamu..."
+            oninput="updateCartUI()">
+        </div>
+        <div class="mb-2">
+          <label class="form-label small fw-bold text-dark mb-1">💳 Metode Pembayaran</label>
+          <select class="form-select form-select-sm" id="paymentMethod" onchange="updateCartUI()">
+            <option value="dana/qris/spay">dana / qris / spay</option>
+            <option value="DANA">DANA</option>
+            <option value="QRIS">QRIS</option>
+            <option value="ShopeePay">ShopeePay</option>
+            <option value="GoPay">GoPay</option>
+            <option value="Transfer Bank">Transfer Bank (BCA/Mandiri/BRI)</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="offcanvas-footer p-3 border-top bg-light">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <span class="fw-bold">Total Pembayaran:</span>
+        <span class="fw-black text-raspberry fs-5" id="cartTotal">Rp0</span>
+      </div>
+      <div class="d-grid gap-2">
+        <a href="#" id="btnCheckoutWA" target="_blank" class="btn btn-success fw-bold">
+          <i class="fab fa-whatsapp me-2"></i>Checkout via WhatsApp
+        </a>
+        <button class="btn btn-outline-danger btn-sm" id="btnClearCart">
+          <i class="fa-solid fa-trash me-1"></i>Kosongkan Keranjang
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS Dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js?_v=20260904_08"></script>
+
+  <!-- Security Script -->
+  <script>
+    (function initSecurity() {
+      document.addEventListener('contextmenu', (e) => e.preventDefault());
+      document.addEventListener('selectstart', (e) => {
+        const tag = e.target.tagName?.toLowerCase();
+        if (tag !== 'input' && tag !== 'textarea') e.preventDefault();
+      });
+      document.addEventListener('dragstart', (e) => e.preventDefault());
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'F12' || e.keyCode === 123) e.preventDefault();
+        if (e.ctrlKey && e.shiftKey && ['I', 'J', 'C'].includes(e.key?.toUpperCase())) e.preventDefault();
+        if (e.ctrlKey && ['U', 'S'].includes(e.key?.toUpperCase())) e.preventDefault();
+      });
+    })();
+  </script>
+
+</body>
+
+</html>

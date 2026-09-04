@@ -227,7 +227,7 @@ function getFullProductName(item) {
 }
 
 function buildSingleVariantWALink(v, defaultWaGroup) {
-  const storeName = window.CONFIG?.storeName || "Peony Store";
+  const storeName = window.CONFIG?.storeName || "Lilacmart";
   const now = new Date();
   const timeStr = now.toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' }).replace('.', ':');
   const dateStr = now.toLocaleDateString('id-ID', { day: '2-digit', month: '2-digit', year: 'numeric' });
@@ -656,7 +656,7 @@ function updateCartUI() {
   const dateStr = now.toLocaleDateString('id-ID', { day: '2-digit', month: '2-digit', year: 'numeric' });
   const dateTimeFormatted = `${timeStr}, ${dateStr}`;
 
-  const storeName = window.CONFIG?.storeName || "Peony Store";
+  const storeName = window.CONFIG?.storeName || "Lilacmart";
   const buyerNameVal = document.getElementById("buyerName")?.value.trim();
   const buyerName = buyerNameVal || "Nama Pemesan";
   const paymentVal = document.getElementById("paymentMethod")?.value || "dana/qris/spay";

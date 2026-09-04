@@ -270,11 +270,7 @@ window.showDetailByKey = function (groupKey) {
   if (!bsModal) bsModal = new bootstrap.Modal(modalEl);
 
   const modalBody = document.getElementById('modalBody');
-  const modalAddCart = document.getElementById('modalAddCart');
-  const modalPesanBtn = document.getElementById('modalPesanBtn');
-
   const catIconClass = categoryIconsFA[group.kategori] || "fa-box";
-  const primaryVariant = group.variants.find(v => Number(v.stok) > 0) || group.variants[0];
 
   const variantsHTML = group.variants.map((v, i) => {
     const stokOK = Number(v.stok) > 0;
@@ -351,15 +347,6 @@ window.showDetailByKey = function (groupKey) {
       ${variantsHTML}
     </div>
   `;
-
-  if (primaryVariant && modalPesanBtn && modalAddCart) {
-    modalPesanBtn.href = buildSingleVariantWALink(primaryVariant, group.wa);
-    modalAddCart.onclick = () => {
-      addToCart(primaryVariant.nama);
-      bsModal.hide();
-      new bootstrap.Offcanvas('#offcanvasCart').show();
-    };
-  }
 
   bsModal.show();
 };

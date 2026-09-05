@@ -410,28 +410,38 @@ async function loadProdukFromSheet() {
 const defaultTncData = [
   {
     icon: "fa-shield-halved",
-    judul: "🔰 Syarat, Ketentuan & Garansi Layanan",
-    deskripsi: "Setiap transaksi aplikasi premium & produk digital di Lilacmart dilindungi garansi resmi penuh selama durasi paket aktif. Apabila terdapat kendala teknis atau masalah akses akun, tim CS kami akan membantu proses perbaikan atau memberikan penggantian akun baru dalam waktu 1x24 jam."
+    judul: "՞•ᴥ•՞ 🍯॰ 𝑻𝒆𝒓𝒎𝒔 𝒂𝒏𝒅 𝑪𝒐𝒏𝒅𝒊𝒕𝒊𝒐𝒏",
+    deskripsi: "membeli sama dengan setuju dengan persyaratan yang ditentukan. Aplikasi tidak mulus 100% pasti ada problemnya"
   },
   {
     icon: "fa-bolt",
-    judul: "⚡ Panduan Pemesanan & Pembayaran Instan",
+    judul: "♡.✿🎀 𝑷𝒂𝒏𝒅𝒖𝒂𝒏 𝑷𝒆𝒎𝒆𝒔𝒂𝒏𝒂𝒏 & 𝑷𝒆𝒎𝒃𝒂𝒚𝒂𝒓𝒂𝒏 𝑰𝒏𝒔𝒕𝒂𝒏",
     deskripsi: "Pilih aplikasi yang Anda butuhkan melalui katalog, tentukan durasi varian, lalu masukkan ke keranjang belanja. Tekan tombol Checkout untuk melanjutkan transaksi via WhatsApp CS. Pembayaran dapat dilakukan secara instan via QRIS (DANA, ShopeePay, GoPay, OVO) atau Transfer Bank (BCA, Mandiri, BRI)."
   },
   {
     icon: "fa-user-lock",
-    judul: "📜 Aturan Penggunaan Akun (Sharing & Private)",
+    judul: "ꔛ｡🎀𓍯 𝑨𝒕𝒖𝒓𝒂𝒏 𝑷𝒆𝒏𝒈𝒈𝒖𝒂 𝑨𝒌𝒖𝒏 (𝑺𝒉𝒂𝒓𝒊𝒏𝒈 & 𝑷𝒓𝒊𝒗𝒂𝒕)",
     deskripsi: "• Akun Sharing: Pembeli dilarang keras mengubah password, profil, email utama, atau PIN profil yang terdaftar. Gunakan hanya pada 1 device sesuai kesepakatan.||• Akun Private: Pembeli berhak mengubah password, profil, & mengatur akun secara penuh."
   },
   {
     icon: "fa-clock",
-    judul: "⏱️ Jam Operasional & Durasi Proses",
-    deskripsi: "Layanan CS & pemrosesan pesanan aktif setiap hari pukul 08:00 - 23:00 WIB. Pesanan diproses kilat antara 5 hingga 15 menit setelah bukti pembayaran dikonfirmasi oleh Admin."
+    judul: "🎀ꕀ⋆꙳ 𝑱𝒂𝒎 𝑶𝒑𝒆𝒓𝒂𝒔𝒊𝒏𝒐𝒂𝒍 & 𝑫𝒖𝒓𝒂𝒔𝒊 𝑷𝒓𝒐𝒔𝒆𝒔",
+    deskripsi: "Admin & proses pesanan aktif setiap hari pukul 08:00-23:00. Proses pemesanan dilakukan setelah payment sudah masuk & di proses dalam waktu 10-30 menit"
+  },
+  {
+    icon: "fa-shield-heart",
+    judul: "₊˚ 𓂃🎀 𝑮𝒂𝒓𝒂𝒏𝒔𝒊",
+    deskripsi: "Tidak ada jaminan akun akan selalu aman 100% mohon menunggu garansi sesuai setimasi\nestimasi garansi = maksimal 3×24 jam"
+  },
+  {
+    icon: "fa-arrows-rotate",
+    judul: "🎀 ◝✩ 𝑹𝒆𝒑𝒍𝒂𝒄𝒆",
+    deskripsi: "jika terjadi kendaka pada akun maka seler akan melakukan penanganan terlebih dahulu, replace akun akan diberikan jika kendala pada akun tidak dapat diperbaiki"
   },
   {
     icon: "fa-rotate-left",
-    judul: "🔄 Kebijakan Pengembalian & Refund",
-    deskripsi: "Klaim refund atau pengembalian dana dapat disetujui 100% apabila tim CS kami tidak mampu memberikan solusi atau produk pengganti setelah batas waktu 1x24 jam sejak laporan kendala diterima."
+    judul: "🎀⋆｡˚♡ 𝑹𝒆𝒇𝒖𝒏𝒅",
+    deskripsi: "Pengembalian dana hanya berlaku jika admin tidak dapat memenuhi pesanan setelah masa garansi proses pemeriksaan berakhir"
   }
 ];
 
@@ -539,10 +549,10 @@ function renderTncAccordions(tncList) {
   const contactCardHTML = `
     <div class="tnc-contact-card mt-4">
       <div class="tnc-contact-header">
-        <i class="fa-solid fa-headset me-2 text-raspberry"></i> Hubungi Customer Support Lilacmart
+        𖥻🧷🎀 ₊˚♡ 𝑪𝒐𝒏𝒕𝒂𝒄𝒕 𝑰𝒏𝒇𝒐 ~· ♡
       </div>
       <div class="tnc-contact-sub">
-        Tim CS Lilacmart siap membantu pertanyaan, konsultasi varian produk, atau klaim garansi transaksi kamu!
+        Hubungi Admin imsol untuk  pertanyaan &amp; konsultasi
       </div>
       <div class="tnc-social-grid">
         <a class="tnc-social-btn telegram" href="https://t.me/Lilacjiyoo" id="tncTeleBtn" target="_blank">

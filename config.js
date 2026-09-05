@@ -186,19 +186,21 @@ function applyDynamicBranding() {
   }
 
   // 2. Direct Header Brand Element Updates
-  const brandTitleEl = document.querySelector('.header-title');
-  if (brandTitleEl && cfg.storeName) {
+  const brandTitleEls = document.querySelectorAll('.header-title, .hero-store-name, .hero-card-title');
+  if (brandTitleEls.length > 0 && cfg.storeName) {
     let name = cfg.storeName.trim();
     let parts = name.split(/\s+/).filter(Boolean);
     if (parts.length === 1) {
       parts = name.split(/(?<=[a-z])(?=[A-Z])/).filter(Boolean);
     }
+    let htmlVal = "";
     if (parts.length >= 2) {
       const last = parts.pop();
-      brandTitleEl.innerHTML = `${parts.join(' ')} <em>${last}</em>`;
+      htmlVal = `${parts.join(' ')} <em>${last}</em>`;
     } else {
-      brandTitleEl.innerHTML = `${name} <em>Store</em>`;
+      htmlVal = `${name} <em>Store</em>`;
     }
+    brandTitleEls.forEach(el => { el.innerHTML = htmlVal; });
   }
 
   const brandRightEl = document.querySelector('.header-right-text');
